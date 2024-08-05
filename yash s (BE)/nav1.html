@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    
+    .profile-img {
+      max-width: 150px;
+      border-radius: 50%;
+    }
+    .btn btn-primary btn-block mb-3{
+        color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <button class="btn btn-primary btn-block mb-3" style="background-color: aqua;" onclick="showPersonalDetails()">Personal Details</button>
+        <button class="btn btn-success btn-block" onclick="showContactDetails()">Contact Details</button>
+      </div>
+      <div class="col-md-9">
+        <div id="personalDetails" style="display: none;">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              Personal Details
+            </div>
+            <div class="card-body">
+              <div class="text-center mb-3">
+                <img src="./assests/video/WhatsApp Image 2022-12-12 at 12.06.26 copy.jpg" alt="Profile Photo" class="profile-img">
+              </div>
+              <h3 class="card-title">Yash Sanjay Sawardekar</h3>
+              <p class="card-text"><b>Address: </b>At Ambav</p>
+              <p class="card-text"><b>Date of Birth:</b> 16 may 2003</p>
+              <p class="card-text"><b>Career Objective :</b></Career> To Secure a job in the IT industry where I can utilize my knowledge for the organizations growth.</p>
+              <p class="card-text"><b>Project 1 :</b> Online Gas Management System </p>
+              <p class="card-text"><b>Project 2:</b> Car Driving School Management System </p>
+              <p class="card-text"><b>Skills : </b> C | Java | Python | JavaScript | Html | CSS | MySQL   </p>
+              
+            </div>
+          </div>
+        </div>
+        <div id="contactDetails" style="display: none;">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              Contact Details
+            </div>
+            <div class="card-body" >
+              <p class="card-text"><i class="fas fa-phone"></i> Phone Number:136363636</p>
+              <p class="card-text"><i class="fas fa-envelope"></i> Email: sawarde@gmail.com</p>
+              <p class="card-text"><i class="fas fa-envelope"></i> Pincode: 415641</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function showPersonalDetails() {
+      document.getElementById('personalDetails').style.display = 'block';
+      document.getElementById('contactDetails').style.display = 'none';
+    }
+
+    function showContactDetails() {
+      document.getElementById('personalDetails').style.display = 'none';
+      document.getElementById('contactDetails').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
